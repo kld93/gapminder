@@ -1,0 +1,19 @@
+name: "GapMinder Data Exploration"
+navbar:
+  title: "GapMinder Data Exploration"
+  left:
+    - text: "About the Data"
+      href: about.html
+    - text: "Life Expectancy"
+      href: life-expectancy.html
+    - text: "Fertility"
+      href: fertility.html
+    - text: "Infant Mortality"
+      href: infant-mortality.html
+output_dir: "."
+output:
+  html_document:
+    theme: darkly
+    highlight: textmate
+    toc: true 
+    toc_float: true 
