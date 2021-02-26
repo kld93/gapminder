@@ -19,16 +19,22 @@ gap2011 <- gapminder %>%
   filter(year == 2011)
 ```
 
-## Infant Mortality
+### Infant Mortality vs. Life Expectancy
 
 ```{r, echo = FALSE}
 ggplot(data = gap2011) +
-  geom_point(mapping = aes(x = life_expectancy, y = infant_mortality, color = continent))
+  geom_point(mapping = aes(x = life_expectancy, y = infant_mortality, color = continent, size = population))
 ```
 
+Note: points are colored according to Continent and sized according to population (see legend above).
+<br>
+<br>
+
+### Infant Mortality per Continent
 ```{r, echo = FALSE}
 ggplot(data = gap2011) +
   geom_col(aes(x = continent, y = infant_mortality, fill = continent))
 ```
 
+Note: points are colored according to Continent.
 

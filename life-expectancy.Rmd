@@ -18,14 +18,22 @@ gap2011 <- gapminder %>%
   filter(year == 2011)
 ```
 
-## Life Expectancy
+### Life Expectancy vs. GDP
 
 ```{r, echo = FALSE}
 ggplot(data = gap2011) +
   geom_point(mapping = aes(x = gdp, y = life_expectancy, color = continent, size = population))
 ```
 
+Note: points are colored according to Continent and sized according to population (see legend above).
+<br>
+<br>
+
+### Life Expectancy per Continent
+
 ```{r, echo = FALSE}
 ggplot(data = gap2011) +
   geom_col(aes(x = continent, y = life_expectancy, fill = continent))
 ```
+
+Note: Life expectancy varies per country within each continent. Above plot shows highest life expectancy in each continent.
